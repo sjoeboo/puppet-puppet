@@ -6,7 +6,7 @@ class puppet::params {
   $use_srv_records = false
   $srv_domain = undef
   $runmode = 'cron'
-  $environment = undef
+  $env = undef
   $puppetmaster = "puppet.${::domain}"
 
   $autosign = '/etc/puppetlabs/puppet/autosign.conf'
