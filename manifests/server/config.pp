@@ -27,6 +27,7 @@ class puppet::server::config (
   $server_ssl_ca_cert    = $::puppet::server_ssl_ca_cert,
   $server_ssl_cert_chain = $::puppet::server_ssl_cert_chain,
   $server_ssl_crl_path   = $::puppet::server_ssl_crl_path,
+  $admin_whitelist       = $::puppet::admin_whitelist,
 ) {
 
   $file_ensure = $server ? {
@@ -109,7 +110,7 @@ class puppet::server::config (
       ensure => 'absent',
     }
   }
-  
+
   if ( $autosign_runnable ) {
     $autosign_mode    = '0550'
     $autosign_content = $autosign_script

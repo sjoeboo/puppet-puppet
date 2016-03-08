@@ -78,7 +78,7 @@ describe 'puppet::server::config', :type => :class do
      let(:pre_condition) { 'class { "puppet": server => true, autosign_runnable => true, autosign_script => "/bin/false" }'}
      it { should contain_file('/etc/puppetlabs/puppet/autosign.conf').with(:content => "/bin/false", :mode => '0550') }
    end
-   
+
     context 'set disable ca' do
       let(:pre_condition) { 'class { "puppet": server => true, server_ca_enabled => false }'}
       it { should_not contain_file('/etc/puppetlabs/puppetserver/bootstrap.cfg').with(:content => /puppetlabs\.services\.ca\.certificate\-authority\-service\/certificate\-authority\-service/) }
@@ -143,6 +143,11 @@ describe 'puppet::server::config', :type => :class do
     context 'with ssl-crl-path' do
       let(:pre_condition) { 'class { "puppet": server => true, server_ssl_crl_path => "/example/path" } ' }
       it { should contain_file('/etc/puppetlabs/puppetserver/conf.d/webserver.conf').with(:content => /\/example\/path/) }
+    end
+    context 'with admin_whitelist' do
+      let(:pre_condition) { 'class { "puppet": server => true, admin_whitelist => ["test1","test2"] } ' }
+      it { should contain_file('/etc/puppetlabs/puppetserver/conf.d/puppetserver.cond').with(:content => /test1,test2/)}
+
     end
   end
 

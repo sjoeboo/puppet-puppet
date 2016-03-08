@@ -38,6 +38,7 @@ class puppet::params {
   $server_ssl_ca_cert = undef
   $server_ssl_cert_chain = undef
   $server_ssl_crl_path = undef
+  $admin_whitelist  = undef
 
 
   case $::osfamily {
