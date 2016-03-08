@@ -146,7 +146,7 @@ describe 'puppet::server::config', :type => :class do
     end
     context 'with admin_whitelist' do
       let(:pre_condition) { 'class { "puppet": server => true, admin_whitelist => ["test1","test2"] } ' }
-      it { should contain_file('/etc/puppetlabs/puppetserver/conf.d/puppetserver.cond').with(:content => /test1,test2/)}
+      it { should contain_file('/etc/puppetlabs/puppetserver/conf.d/puppetserver.conf').with(:content => /test1,test2/)}
 
     end
   end
