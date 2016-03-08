@@ -53,8 +53,8 @@ profiler: {
 # Settings related to the puppet-admin HTTP API
 puppet-admin: {
     <% if @admin_whitelist -%>
-    client_whitelist: [ <%= @admin_whitelist.join(',') %>]
+    client_whitelist: [ <%= @admin_whitelist.join(',') %> ]
     <% else -%>
-    client-whitelist: [ ]
+    client-whitelist: []
     <% end -%>
 }
