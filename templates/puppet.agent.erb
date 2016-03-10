@@ -5,3 +5,9 @@
 <% if !@use_srv_records -%>
   server            = <%= if ( @puppetmaster and !@puppetmaster.empty? ) then @puppetmaster else @fqdn end %>
 <% end -%>
+<% if @splay -%>
+  splay             = <%= @splay %>
+<% end -%>
+<% if @splay == true and @splaylimit -%>
+  splaylimit        = <%= @splaylimit %>
+<% end -%>

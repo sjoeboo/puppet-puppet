@@ -9,6 +9,8 @@ class puppet (
   Enum['cron', 'service', 'none']              $runmode         = $::puppet::params::runmode,
   Optional[String]                             $env             = $::puppet::params::env,
   String                                       $puppetmaster    = $::puppet::params::puppetmaster,
+  Optional[Boolean]                            $splay           = $::puppet::params::splay,
+  Oprional[String]                             $splaylimit      = $::puppet::params::splaylimit,
 
   # Server
   String                                       $autosign              = $::puppet::params::autosign,

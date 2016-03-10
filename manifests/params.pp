@@ -8,6 +8,8 @@ class puppet::params {
   $runmode = 'cron'
   $env = undef
   $puppetmaster = "puppet.${::domain}"
+  $splay = false
+  $splaylimit = undef
 
   $autosign = '/etc/puppetlabs/puppet/autosign.conf'
   $autosign_runnable = false
