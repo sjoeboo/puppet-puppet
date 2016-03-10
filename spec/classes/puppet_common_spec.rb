@@ -41,4 +41,14 @@ describe 'puppet::common', :type => :class do
     it { should contain_concat__fragment('puppet_main').with(:content => /dns_alt_names = puppet.example.com/) }
   end
 
+  context 'use splay' do
+    let(:pre_condition) { 'class{"::puppet": splay => true}' }
+    it { should contain_concat__fragment('puppet_agent').with(:content => /splay\s+=\s+true/) }
+  end
+
+  context 'use splaylimit' do
+    let(:pre_condition) { 'class{"::puppet": splay => true, splaylimit => "60m"}' }
+    it { should contain_concat__fragment('puppet_agent').with(:content => /splaylimit\s+=\s+60m/) }
+  end
+
 end
