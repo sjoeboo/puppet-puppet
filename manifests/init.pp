@@ -10,7 +10,7 @@ class puppet (
   Optional[String]                             $env             = $::puppet::params::env,
   String                                       $puppetmaster    = $::puppet::params::puppetmaster,
   Boolean                                      $splay           = $::puppet::params::splay,
-  Oprional[String]                             $splaylimit      = $::puppet::params::splaylimit,
+  Optional[String]                             $splaylimit      = $::puppet::params::splaylimit,
 
   # Server
   String                                       $autosign              = $::puppet::params::autosign,
