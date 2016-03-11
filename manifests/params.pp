@@ -2,6 +2,9 @@
 class puppet::params {
 
   $agent_version = 'latest'
+  $agent_pkg  = 'puppet-agent'
+  $agent_path = '/opt/puppetlabs/bin/'
+  $agent_config_path = '/etc/puppetlabs/puppet/'
   $ca_server = undef
   $use_srv_records = false
   $srv_domain = undef
