@@ -76,12 +76,19 @@ class puppet (
 
   class { '::puppet::common': }
 
-  class { '::puppet::server':
-    require => Class['puppet::common'],
-  } ->
+  #Why both even  entering the servers bloc of logic if we're not a server..
+  if ( $server == true ){
+    class { '::puppet::server':
+      require => Class['puppet::common'],
+    } ->
 
-  class { '::puppet::agent':
-    require => Class['puppet::common'],
+    class { '::puppet::agent':
+      require => Class['puppet::common'],
+    }
+  } else {
+    class { '::puppet::agent':
+      require => Class['puppet::common'],
+    }
   }
 
 }
