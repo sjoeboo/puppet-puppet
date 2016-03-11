@@ -1,12 +1,12 @@
 {
-  "name": "jlambert121-puppet",
+  "name": "sjoeboo-puppet",
   "version": "0.8.1",
-  "author": "Justin Lambert",
-  "summary": "Module to manage puppet, puppet-server",
+  "author": "Matt Nicholson",
+  "summary": "Module to manage puppet(agent(3)or 4), puppet-server",
   "license": "Apache-2.0",
-  "source": "https://github.com/jlambert121/jlambert121-puppet",
-  "project_page": "https://github.com/jlambert121/jlambert121-puppet",
-  "issues_url": "https://github.com/jlambert121/jlambert121-puppet/issues",
+  "source": "https://github.com/sjoeboo/puppet-puppet",
+  "project_page": "https://github.com/sjoeboo/puppet-puppet",
+  "issues_url": "https://github.com/sjoeboo/puppet-puppet/issues",
   "tags": ["puppet", "puppetserver"],
   "operatingsystem_support": [
     {
