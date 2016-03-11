@@ -1,3 +1,7 @@
+### DISCLAIMER
+
+This module started as a fork of [jlambert121-puppet](https://github.com/jlambert121/jlambert121-puppet), for some fixes/additions, and has since diverged enough I wanted to publish it on its own. This is an awesome module and was already pretty complete when I started to augment it. Credit for 99% of it should go to the original author. I'm simply adding features I need in a production environment.
+
 #### Table of Contents
 
 1. [Overview](#overview)
@@ -16,11 +20,11 @@
 
 ## Overview
 
-A puppet module to manage puppet-agent and puppetserver (the closure server, not ruby).
+A puppet module to manage puppet-agent(or puppet) and puppetserver (the closure server, not ruby).
 
 ## Module Description
 
-This is a puppet module to manage puppet >= 4.0.0 and puppetserver >= 2.0.0.
+This is a puppet module to manage puppet(puppet 3.x and 4.x) and puppetserver >= 2.0.0
 
 Currently acceptance tests are a bit wonky due to beaker's inability to handle puppet AIO packages
 
@@ -30,7 +34,7 @@ Currently acceptance tests are a bit wonky due to beaker's inability to handle p
 
 * puppet and puppetserver services
 * cron entry (if desired) for scheduled puppet runs
-* /etc/puppetlabs/puppet/*, /etc/puppetlabs/puppetserver/*
+* /etc/puppetlabs/puppet/*, /etc/puppetlabs/puppetserver/*, maybe /etc/puppet if using a puppet3 agent
 
 
 ### Beginning with puppet
@@ -38,7 +42,7 @@ Currently acceptance tests are a bit wonky due to beaker's inability to handle p
 This module can be installed with
 
 ```
-  puppet module install jlambert121-puppet
+  puppet module install sjoeboo-puppet
 ```
 
 ## Usage
@@ -261,17 +265,15 @@ This module is acceptance tested on CentOS 6.5, CentOS 7.0, Ubuntu 12.04, and Ub
 
 ## TODO
 
-- [ ] Add /opt/puppetlabs/bin to PATH
-- [ ] Support setting [environment_timeout](http://docs.puppetlabs.com/puppet/latest/reference/environments_configuring.html#environmenttimeout)
-- [ ] Support configuring [autosign](http://docs.puppetlabs.com/puppet/latest/reference/ssl_autosign.html)
+?
 
 ## Development
 
-Improvements and bug fixes are greatly appreciated.  See the [contributing guide](https://github.com/jlambert121/jlambert121-puppet/CONTRIBUTING.md) for
+Improvements and bug fixes are greatly appreciated.  See the [contributing guide](https://github.com/sjoeboo/puppet-puppet/CONTRIBUTING.md) for
 information on adding and validating tests for PRs.
 
 ## Changelog / Contributors
 
-[Changelog](https://github.com/jlambert121/jlambert121-puppet/blob/master/CHANGELOG)
+[Changelog](https://github.com/sjoeboo/puppet-puppet/blob/master/CHANGELOG)
 
-[Contributors](https://github.com/jlambert121/jlambert121-puppet/graphs/contributors)
+[Contributors](https://github.com/sjoeboo/puppet-puppet/graphs/contributors)
