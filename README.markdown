@@ -266,6 +266,7 @@ This module is acceptance tested on CentOS 6.5, CentOS 7.0, Ubuntu 12.04, and Ub
 ## TODO
 
 * [ ] Generic agent/common/master config hashes to allow setting and config value?
+* [ ] Add a 100% optional bit to install repos for you?
 
 ## Development
 
