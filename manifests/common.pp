@@ -9,6 +9,7 @@ class puppet::common(
   $use_srv_records   = $::puppet::use_srv_records,
   $dns_alt_names     = $::puppet::dns_alt_names,
   $agent_config_path = $::puppet::agent_config_path,
+  $agent_rundir      = $::puppet::agent_rundir,
 ) {
 
   concat { "${agent_config_path}puppet.conf":

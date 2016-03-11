@@ -6,6 +6,7 @@ class puppet (
   String                                       $agent_pkg         = $::puppet::params::agent_pkg,
   String                                       $agent_path        = $::puppet::params::agent_path,
   String                                       $agent_config_path = $::puppet::params::agent_config_path,
+  Optional[String]                             $agent_rundir      = $::puppet::params::agent_rundir,
   Optional[String]                             $ca_server         = $::puppet::params::ca_server,
   Boolean                                      $use_srv_records   = $::puppet::params::use_srv_records,
   Optional[String]                             $srv_domain        = $::puppet::params::srv_domain,
