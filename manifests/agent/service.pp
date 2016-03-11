@@ -15,7 +15,7 @@ class puppet::agent::service (
       cron { 'puppet':
         ensure  => 'present',
         user    => 'root',
-        command => "${agent_path}/puppet agent --onetime --no-daemonize",
+        command => "${agent_path}puppet agent --onetime --no-daemonize",
         hour    => '*',
         minute  =>  [ fqdn_rand(30), fqdn_rand(30) + 30 ],
       }
