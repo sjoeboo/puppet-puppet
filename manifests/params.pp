@@ -36,7 +36,7 @@ class puppet::params {
   $server_reports = undef
   $server_version = 'latest'
   $firewall = false
-  $jruby_instances = $::processors[count]-1
+  $jruby_instances = $::processorcount - 1
   $use_legacy_auth = false
   $server_ssl_cert = undef
   $server_ssl_key = undef
