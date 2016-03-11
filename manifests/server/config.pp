@@ -117,7 +117,7 @@ class puppet::server::config (
   }
   else {
     $autosign_mode = '0440'
-    $autosign_content = join($autosign_list, '\n')
+    $autosign_content = join($autosign_list, "\n")
   }
 
   if ($server and ($autosign_list != [] or $autosign_script != '' )) {
