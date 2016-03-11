@@ -1,6 +1,6 @@
 {
   "name": "sjoeboo-puppet",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "author": "Matt Nicholson",
   "summary": "Module to manage puppet(agent(3)or 4), puppet-server",
   "license": "Apache-2.0",
@@ -29,7 +29,7 @@
     }
   ],
   "dependencies": [
-    { "name": "puppetlabs/concat", "version_requirement": ">= 1.1.0 <2.0.0" },
+    { "name": "puppetlabs/concat", "version_requirement": ">= 1.1.0 <2.1.0" },
     { "name": "puppetlabs/stdlib", "version_requirement": ">=4.2.0 <5.0.0" },
     { "name": "puppetlabs/firewall", "version_requirement": ">= 1.2.0 <2.0.0" }
   ]
