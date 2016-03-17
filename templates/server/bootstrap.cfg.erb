@@ -15,4 +15,6 @@ puppetlabs.services.ca.certificate-authority-service/certificate-authority-servi
 <% else -%>
 puppetlabs.services.ca.certificate-authority-disabled-service/certificate-authority-disabled-service
 <% end -%>
+<% if @puppetserver_version and @puppetserver_version >= '2.3.0' -%>
 puppetlabs.services.versioned-code-service.versioned-code-service/versioned-code-service
+<% end -%>
