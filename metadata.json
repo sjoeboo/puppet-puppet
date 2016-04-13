@@ -1,6 +1,6 @@
 {
   "name": "sjoeboo-puppet",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "author": "Matt Nicholson",
   "summary": "Module to manage puppet(agent(3)or 4), puppet-server",
   "license": "Apache-2.0",
