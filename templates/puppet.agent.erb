@@ -11,3 +11,8 @@
 <% if @splay == true and @splaylimit -%>
   splaylimit        = <%= @splaylimit %>
 <% end -%>
+<% if @agent_config_hash -%>
+<% @agent_config_hash.each do |key,value| -%>
+<%= key %>          = <%= value %>
+<% end -%>
+<% end -%>

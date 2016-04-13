@@ -14,6 +14,7 @@ class puppet::params {
   $puppetmaster = "puppet.${::domain}"
   $splay = false
   $splaylimit = undef
+  $admin_config_hash = {}
 
   $autosign = '/etc/puppetlabs/puppet/autosign.conf'
   $autosign_runnable = false

@@ -8,6 +8,7 @@ class puppet::agent::config (
   $runinterval        = $::puppet::runinterval,
   $splay              = $::puppet::splay,
   $splaylimit         = $::puppet::splaylimit,
+  $agent_config_hash  = $::puppet::agent_config_hash,
 ) {
 
   if $env == undef {
