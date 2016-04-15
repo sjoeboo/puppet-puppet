@@ -16,6 +16,7 @@ class puppet (
   Boolean                                      $splay             = $::puppet::params::splay,
   Optional[String]                             $splaylimit        = $::puppet::params::splaylimit,
   Optional[Hash]                               $agent_config_hash = $::puppet::params::agent_config_hash,
+  Optional[String]                             $cron_cmd          = $::puppet::params::cron_cmd,
 
   # Server
   String                                       $autosign              = $::puppet::params::autosign,
