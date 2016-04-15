@@ -2,6 +2,7 @@
 class puppet::agent::service (
   $runmode = $::puppet::runmode,
   $agent_path = $::puppet::agent_path,
+  $cron_cmd_pre = $::puppet::cron_cmd_pre,
   $cron_cmd = $::puppet::cron_cmd,
 ){
 
@@ -16,7 +17,7 @@ class puppet::agent::service (
       cron { 'puppet':
         ensure  => 'present',
         user    => 'root',
-        command => "${agent_path}${cron_cmd}",
+        command => "${cron_cmd_pre} ${agent_path}${cron_cmd}",
         hour    => '*',
         minute  =>  [ fqdn_rand(30), fqdn_rand(30) + 30 ],
       }

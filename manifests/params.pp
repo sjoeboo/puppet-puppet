@@ -15,6 +15,7 @@ class puppet::params {
   $splay = false
   $splaylimit = undef
   $admin_config_hash = {}
+  $cron_cmd_pre = 'MAILTO=""'
   $cron_cmd = 'puppet agent --onetime --no-daemonize'
 
   $autosign = '/etc/puppetlabs/puppet/autosign.conf'
