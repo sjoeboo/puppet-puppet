@@ -14,10 +14,12 @@ class puppet::agent::service (
 
   case $runmode {
     'cron': {
+      $sleep_sec = fqdn_rand(59)
+
       cron { 'puppet':
         ensure  => 'present',
         user    => 'root',
-        command => "${cron_cmd_pre} ${agent_path}${cron_cmd}",
+        command => "${cron_cmd_pre} sleep ${sleep_sec} ${agent_path}${cron_cmd}",
         hour    => '*',
         minute  =>  [ fqdn_rand(30), fqdn_rand(30) + 30 ],
       }
