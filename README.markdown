@@ -234,6 +234,11 @@ String. Path to server ssl CRL (see https://docs.puppetlabs.com/puppetserver/2.2
 
 Default: undef
 
+#####`webserver_opts`
+Hash. Hash of webserver.conf options, its up to you to make sure they're "Real"
+https://docs.puppetlabs.com/puppetserver/2.2/config_file_webserver.html)
+
+Default: undef
 
 ## Reference
 

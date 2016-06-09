@@ -50,6 +50,7 @@ class puppet (
   Optional[String]                             $server_ssl_cert_chain = $::puppet::params::server_ssl_cert_chain,
   Optional[String]                             $server_ssl_crl_path   = $::puppet::params::server_ssl_crl_path,
   Optional[Array]                              $admin_whitelist       = $::puppet::params::admin_whitelist,
+  Optional[Hash]                               $webserver_opts        = $::puppet::params::webserver_opts,
 ) inherits puppet::params {
 
   if $puppetdb and !$puppetdb_server {

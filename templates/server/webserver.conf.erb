@@ -20,4 +20,9 @@ webserver: {
     <% if @server_ssl_crl_path -%>
     ssl-crl-path = <%= @server_ssl_crl_path %>
     <% end -%>
+    <% if @webserver_opts -%>
+    <% @webserver_opts.each do |key,value| -%>
+    <%= key %> = <%= value %>
+    <% end -%>
+    <% end -%>
 }

@@ -28,6 +28,7 @@ class puppet::server::config (
   $server_ssl_cert_chain = $::puppet::server_ssl_cert_chain,
   $server_ssl_crl_path   = $::puppet::server_ssl_crl_path,
   $admin_whitelist       = $::puppet::admin_whitelist,
+  $webserver_opts         = $::puppet::webserver_opts,
 ) {
 
   $file_ensure = $server ? {
