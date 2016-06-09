@@ -1,6 +1,8 @@
 # Change Log
 
-## [0.8.5] 
+## [0.8.8]
+* adds webserver_opts hash to allow you to pass arbitrary key/value pairs for webserver.conf
+## [0.8.5]
 * added agent_config_hash which will take key:value pairs for agent config options so now we supper them all
 
 ## [0.8.1](https://github.com/jlambert121/jlambert121-puppet/tree/0.8.0) (2016-03-03)
