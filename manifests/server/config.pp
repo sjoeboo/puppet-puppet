@@ -67,8 +67,15 @@ class puppet::server::config (
 
   # Template uses
   # - $ca_enabled
-  file { '/etc/puppetlabs/puppetserver/bootstrap.cfg':
-    content => template("${module_name}/server/bootstrap.cfg.erb"),
+  #Shit changed w/ server 2.5.0..
+  if $::puppetserver_version >= '2.5.0' {
+    file { '/etc/puppetlabs/puppetserver/services.d/ca.cfg':
+      content => template("${module_name}/server/ca.cfg.erb"),
+    }
+  } else {
+    file { '/etc/puppetlabs/puppetserver/bootstrap.cfg':
+      content => template("${module_name}/server/bootstrap.cfg.erb"),
+    }
   }
 
   # Template uses
