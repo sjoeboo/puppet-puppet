@@ -72,6 +72,9 @@ class puppet::server::config (
     file { '/etc/puppetlabs/puppetserver/services.d/ca.cfg':
       content => template("${module_name}/server/ca.cfg.erb"),
     }
+    file { '/etc/puppetlabs/puppetserver/bootstrap.cfg':
+      ensure => absent,
+    }
   } else {
     file { '/etc/puppetlabs/puppetserver/bootstrap.cfg':
       content => template("${module_name}/server/bootstrap.cfg.erb"),
