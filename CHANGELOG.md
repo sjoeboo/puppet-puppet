@@ -1,5 +1,6 @@
 # Change Log
-
+## [0.9.0]
+* add puppetserver 2.5.0 support by splitting bootstrap.cfg and ca.cfg per [(https://docs.puppet.com/puppetserver/2.5/release_notes.html)]
 ## [0.8.8]
 * adds webserver_opts hash to allow you to pass arbitrary key/value pairs for webserver.conf
 ## [0.8.5]
