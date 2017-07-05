@@ -14,7 +14,7 @@ class puppet::params {
   $puppetmaster = "puppet.${::domain}"
   $splay = false
   $splaylimit = undef
-  $admin_config_hash = {}
+  $agent_config_hash = {}
   $cron_cmd_pre = 'MAILTO=""'
   $cron_cmd = 'puppet agent --onetime --no-daemonize'
 
